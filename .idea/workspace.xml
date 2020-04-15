@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d3cd7f9-01eb-4588-b5f6-31e26be6f043" name="Default Changelist" comment="" />
+    <list default="true" id="4d3cd7f9-01eb-4588-b5f6-31e26be6f043" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cards/MovementCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cards/NumericalCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cards/ReverseCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cards/SkipCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cards/WildCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Display.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/NumericalCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/ReverseCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/UnoGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorfulCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/ColorfulCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DrawTwoCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/DrawTwoCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MovementCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NumericalCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReverseCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SkipCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnoGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/UnoGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WildCard.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +42,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1aWRXqpt9MxkLWEQkfPH0Qeldyg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,6 +59,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
@@ -62,42 +94,42 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="183" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1586938814163" />
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1586948595354">
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1586985408062">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1586948595354" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1586948679802">
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1586985408062" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1586985882073">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586948679802" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1586948679800">
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586985882073" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1586985882072">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586948679800" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1586948679799">
+    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586985882072" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1586985882071">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586948679799" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1586948679801">
+    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586985882071" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1586985882073">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586948679801" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1586948679870">
+    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586985882073" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1586985882075">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586948679870" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1586948679869">
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586985882075" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1586985882074">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1586948679869" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1586948679869">
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1586985882074" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1586985882074">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1586948679869" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1586948679870">
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1586985882074" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1586985882075">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586948679870" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586985882075" />
     <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1586849410480">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -108,10 +140,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
+          <line>15</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((Player.PcPlayer)game.players.get(0)).hand.cardList" custom="Player.PcPlayer" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
