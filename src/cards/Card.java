@@ -1,3 +1,5 @@
+package cards;
+
 public abstract class Card {
 
     public abstract String getColor();

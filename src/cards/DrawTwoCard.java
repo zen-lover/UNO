@@ -1,6 +1,8 @@
+package cards;
+
 public class DrawTwoCard extends MovementCard {
 
-    public DrawTwoCard(Color color){
+    public DrawTwoCard(NumericalCard.Color color){
         super(color, Value.DRAWTWO);
     }
 
