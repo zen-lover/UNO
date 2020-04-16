@@ -20,20 +20,20 @@ public class UnoGame {
 
     public void init() {
 
-        System.out.println("Welcome to UNO game\n");
+        System.out.println("\033[1;36m"+"Welcome to UNO game\n"+"\033[0m");
         boolean invalid;
         int numberOfPlayer = 3;
         do {
             invalid = false;
             try {
                 Scanner in = new Scanner(System.in);
-                System.out.println("please enter number of player (3,5):");
+                System.out.println("\033[0;35m"+"please enter number of player (3,5):"+"\033[0m");
                 numberOfPlayer = in.nextInt();
                 if (numberOfPlayer > 5 || numberOfPlayer < 3) {
                     throw new ArithmeticException("invalid number.");
                 }
             } catch (Exception e) {
-                System.out.println("format number of player is not valid.");
+                System.out.println("\033[0;31m"+"format number of player is not valid."+"\033[0m");
                 invalid = true;
             }
 
@@ -60,13 +60,13 @@ public class UnoGame {
                                 throw new ArithmeticException("invalid number.");
                             }
                         } catch (Exception e) {
-                            System.out.println("format type of player is not valid.");
+                            System.out.println("\033[0;31m"+"format type of player is not valid."+"\033[0m");
                             invalid = true;
                         }
 
                     } while (valid);
                 } catch (Exception e) {
-                    System.out.println("format name of player is not valid.");
+                    System.out.println("\033[0;31m"+"format name of player is not valid."+"\033[0m");
                     invalid = true;
                 }
 
@@ -94,6 +94,7 @@ public class UnoGame {
         table.setCurrentPlayer(p);
         display.show(players, p);
         do {
+
 
         } while (!endGame());
 
