@@ -27,5 +27,17 @@ public abstract class CardList {
         else
             return false;
     }
+
+    @Override
+    public String toString() {
+        int i = 1;
+        String string ="\n";
+        for (Card card: cardList){
+            string += i +") color: " + card.getColor()
+                    + " value: " + card.getValue() + "\n";
+            i++;
+        }
+        return string;
+    }
 }
 
