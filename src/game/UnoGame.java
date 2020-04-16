@@ -20,7 +20,7 @@ public class UnoGame {
 
     public void init() {
 
-        System.out.println("\033[1;36m"+"Welcome to UNO game\n"+"\033[0m");
+        System.out.println("\033[1;36m"+"\nWelcome to UNO game\n"+"\033[0m");
         boolean invalid;
         int numberOfPlayer = 3;
         do {
@@ -82,7 +82,7 @@ public class UnoGame {
 
         table.prepareTable();
 
-        this.divideCard();
+        table.divideCard(players);
 
     }
 
@@ -96,33 +96,12 @@ public class UnoGame {
         do {
 
 
-        } while (!endGame());
+        } while (endGame());       ///////////
 
     }
 
     public void finish() {
-
-    }
-
-    /**
-     * Distribute 7 cards to all players in the game.
-     *
-     * @return true if the operation was successful, false otherwise.
-     */
-    private boolean divideCard() {
-        Card card;
-
-        for (Player player : players) {
-            for (int i = 0; i < 7; i++) {
-                card = this.table.pullCard();
-                if (card == null)
-                    return false;
-
-                player.takeCard(card);
-            }
-        }
-
-        return true;
+        Display.getDisplay().scoreTable(players);
     }
 
     private boolean endGame() {
@@ -133,6 +112,7 @@ public class UnoGame {
         }
         return false;
     }
+
 
 
 }

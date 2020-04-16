@@ -118,4 +118,16 @@ public class Table {
     public void setCurrentPlayer(Player currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
+
+    public void divideCard(ArrayList<Player> players) {
+        Card card;
+
+        for (Player player : players) {
+            for (int i = 0; i < 7; i++) {
+                card = pullCard();
+                player.takeCard(card);
+            }
+        }
+
+    }
 }

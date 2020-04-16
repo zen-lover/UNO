@@ -24,6 +24,7 @@ public class Main {
         UnoGame game = new UnoGame();
         game.init();
         game.start();
+        game.finish();
 
     }
 }
