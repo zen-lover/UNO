@@ -73,9 +73,9 @@ public class UnoGame {
             } while (invalid);
 
             if (type == 1) {
-                players.add(new PcPlayer(playerName));
+                players.add(new PcPlayer(playerName, i));
             } else if (type == 2) {
-                players.add(new HumanPlayer(playerName));
+                players.add(new HumanPlayer(playerName, i));
             }
 
         }
@@ -88,15 +88,16 @@ public class UnoGame {
 
     public void start() {
 
+        System.out.println("\n\n***** game start *****\n\n");
         Display display = Display.getDisplay();
         Random random = new Random();
         Player p = players.get(random.nextInt(players.size()));
         table.setCurrentPlayer(p);
-        display.show(players, p);
+        display.showTable(players, table);
         do {
 
 
-        } while (endGame());       ///////////
+        } while (!endGame());       ///////////
 
     }
 
@@ -113,6 +114,7 @@ public class UnoGame {
         return false;
     }
 
-
-
+    public Table getTable() {
+        return table;
+    }
 }

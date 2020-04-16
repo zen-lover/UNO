@@ -105,8 +105,8 @@ public class WildCard extends Card {
         final String ANSI_RESET = "\u001B[0m";
 
         String str = value.toString();
-        int space1 = 7+str.length()/2;
-        int space2 = 9-str.length()/2;
+        int space1 = 8+str.length()/2;
+        int space2 = 8-str.length()/2;
         System.out.printf(ANSI_COLOR+"|$$$$$$$$$$$$$$$|\n");
         System.out.printf("|%" + 17 + "s","|\n");
         System.out.printf("|%"+ space1 + "s" + "%"+ space2 + "s\n",str,"|");

@@ -1,10 +1,7 @@
 package game;
 
-import Player.Player;
-import cards.Card;
-import cards.MovementCard;
-import cards.NumericalCard;
-import cards.WildCard;
+import Player.*;
+import cards.*;
 
 import java.util.*;
 
@@ -19,19 +16,68 @@ public class Display {
         return display;
     }
 
-    public void show(ArrayList<Player> players, Player currentPlayer) {
+    public void showTable(ArrayList<Player> players, Table table) {
 
-        for (Player player : players) {
-            for (Card card : player.getHand().getCardList()) {
+        HashMap<Player, Integer> playerIntegerHashMap = new HashMap<Player, Integer>();
+        for (Player player: players){
+            playerIntegerHashMap.put(player, player.getId());
+        }
+        Map<Player, Integer> sortId = sortByValue(playerIntegerHashMap);
+        Set<Player> keys = sortId.keySet();
+        List<Player> listKeys = new ArrayList<Player>( keys );
+
+        System.out.println("\n\n-------TABLE-------\n\n");
+        System.out.printf("direction:");
+        if (table.isClockwise()){
+            System.out.println("clockwise\n");
+        }else{
+            System.out.println("anticlockwise\n");
+        }
+        System.out.println("----------------------------------------------------------------");
+        int i,j;
+        for (i=0; i<listKeys.size()/2; i++){
+            System.out.printf("%-22s",listKeys.get(i).getName());
+        }
+        System.out.println();
+        for (j=0; j<listKeys.size()/2; j++){
+            System.out.printf("cards: %-15d",listKeys.get(j).getHand().getNumCards());
+        }
+        System.out.println("\n");
+        table.getPile().getCardList().get(0).show();
+        System.out.println();
+        for (i=listKeys.size()-1; i>=listKeys.size()/2; i--){
+            System.out.printf("%-22s",listKeys.get(i).getName());
+        }
+        System.out.println();
+        for (j=listKeys.size()-1; j>=listKeys.size()/2; j--){
+            System.out.printf("cards: %-15d",listKeys.get(j).getHand().getNumCards());
+        }
+        System.out.println();
+        System.out.println("----------------------------------------------------------------");
+
+        if (table.getCurrentPlayer() instanceof HumanPlayer){
+            System.out.println("\n");
+            System.out.println(table.getCurrentPlayer().getName() + " is your turn");
+            System.out.println("This is your hand:\n");
+            for (Card card: table.getCurrentPlayer().getHand().getCardList()){
                 card.show();
             }
+            System.out.println("\nplease choose a card:");
+            System.out.println(table.getCurrentPlayer().getHand().toString());
+        }else {
+            Scanner in = new Scanner(System.in);
+            System.out.println("pc player turn");
+            System.out.println("please press any key to pass turn");
+            in.nextByte();
         }
+
     }
+
 
     public void scoreTable(ArrayList<Player> players) {
         HashMap<Player, Integer> scores = new HashMap<Player, Integer>();
         for (Player player : players) {
-            if (player.getHand().getNumCards() == 0) {
+            if (player.getHand().isEmpty()) {
                 scores.put(player, 0);
             } else {
                 int score = 0;

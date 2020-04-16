@@ -34,9 +34,15 @@ public class Pile extends CardList {
      * This operation is not allowed in this class, since the only way to
      * remove cards from this collection is removing all but the top.
      */
+//    @Override
+//    public Card getCard(int index){
+//        throw new UnsupportedOperationException("Operation not allowed.");
+//    }
+
+
     @Override
-    public Card getCard(int index){
-        throw new UnsupportedOperationException("Operation not allowed.");
+    public Card getCard(int index) {
+        return null;
     }
 
     /**

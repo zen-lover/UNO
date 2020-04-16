@@ -9,9 +9,10 @@ public class Player {
     private Hand hand;
     private int id;
 
-    public Player(String name) {
+    public Player(String name, int id) {
         this.name = name;
         this.hand = new Hand();
+        this.id = id;
     }
 
     public boolean takeCard(Card card){
@@ -24,5 +25,9 @@ public class Player {
 
     public Hand getHand() {
         return hand;
+    }
+
+    public int getId() {
+        return id;
     }
 }
