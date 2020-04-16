@@ -12,6 +12,7 @@ public class Table {
     private static Table table = null;
     private boolean clockwise;
     private Player currentPlayer;
+    private NumericalCard.Color color;
 
     public Table() {
         this.pile = new Pile();
@@ -159,5 +160,25 @@ public class Table {
 
     public Pile getPile() {
         return pile;
+    }
+
+    public NumericalCard.Color getColor() {
+        return color;
+    }
+
+    public void changeCurrentPlayer(ArrayList<Player> players){
+        if (table.isClockwise()){
+            if (players.indexOf(currentPlayer) == players.size()-1){
+                currentPlayer = players.get(0);
+            }else {
+                currentPlayer = players.get(players.indexOf(currentPlayer)+1);
+            }
+        }else{
+            if (players.indexOf(currentPlayer) == 0){
+                currentPlayer = players.get(players.size()-1);
+            }else {
+                currentPlayer = players.get(players.indexOf(currentPlayer)-1);
+            }
+        }
     }
 }
