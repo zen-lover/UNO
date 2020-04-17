@@ -41,4 +41,6 @@ public abstract class MovementCard extends ColorfulCard {
         return (card.getColor().equals(this.getColor())
                 || card.getValue().equals(this.getValue()));
     }
+
+
 }

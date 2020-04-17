@@ -30,4 +30,12 @@ public class Hand extends CardList{
         }
     }
 
+    public Card getCardByIndex(int index){
+        try{
+            return this.cardList.get(index);
+        } catch(IndexOutOfBoundsException e){
+            return null;
+        }
+    }
+
 }

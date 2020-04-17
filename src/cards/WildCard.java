@@ -1,5 +1,10 @@
 package cards;
 
+import Player.Player;
+import game.Table;
+
+import java.util.ArrayList;
+
 public class WildCard extends Card {
 
     public enum Value {
@@ -14,7 +19,6 @@ public class WildCard extends Card {
 
     public WildCard(){
         this.value = Value.WILD;
-        this.used = false;
     }
 
     /**
@@ -37,15 +41,6 @@ public class WildCard extends Card {
         return this.value.name();
     }
 
-    /**
-     * Apply the effect of the wild card in the game. A "WILD" card
-     * changes it's color for BLUE, RED, YELLOR or GREEN. Additionally,
-     * the next player loses its turn.
-     */
-//    @Override
-//    public void applyEffect(EffectsController crtl){
-//        this.setColor(crtl.applyWild());
-//    }
 
     /**
      * Only matches with other cards if its has a color different of BLACK.
@@ -69,7 +64,7 @@ public class WildCard extends Card {
         if(this.used)
             return false;
         if(!NumericalCard.validColor(color))
-//            throw new IllegalArgumentException();
+            throw new IllegalArgumentException();
 
         this.effectiveColor = color;
         this.used = true;
@@ -113,4 +108,10 @@ public class WildCard extends Card {
         System.out.printf("|%" + 17 + "s","|\n");
         System.out.printf("|$$$$$$$$$$$$$$$|\n"+ANSI_RESET);
     }
+
+    public void effect(Table table, ArrayList<Player> players){
+        table.changeCurrentPlayer(players);
+    }
+
+
 }

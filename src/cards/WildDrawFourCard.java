@@ -1,5 +1,10 @@
 package cards;
 
+import Player.Player;
+import game.Table;
+
+import java.util.ArrayList;
+
 public class WildDrawFourCard extends WildCard{
 
     private Value value;
@@ -12,6 +17,12 @@ public class WildDrawFourCard extends WildCard{
     @Override
     public String getValue(){
         return this.value.toString();
+    }
+
+
+    public void effect(Table table, ArrayList<Player> players){
+        table.changeCurrentPlayer(players);
+        table.setBlame(4);
     }
 
 }
