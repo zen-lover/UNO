@@ -28,7 +28,7 @@ public class ReverseCard extends MovementCard{
      * @param players list of players
      */
     public void effect(Table table, ArrayList<Player> players){
-        table.reverseDirection(players);
+        table.reverseDirection();
     }
 
 }
