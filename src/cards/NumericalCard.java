@@ -5,8 +5,16 @@ import game.Table;
 
 import java.util.ArrayList;
 
+/**
+ * Class for numerical card
+ *
+ * @author Mahdi Saeedi
+ * @version 1.0.0
+ * @since 2020-04-18
+ */
 public class NumericalCard extends ColorfulCard {
 
+    // Enum structure for color of wild card
     public enum Color {
         BLUE {
             public String toString() {
@@ -30,6 +38,7 @@ public class NumericalCard extends ColorfulCard {
         }
     }
 
+    // Enum structure for value of wild card
     public enum Value {
 
         // Numerical cards.Card
@@ -85,24 +94,45 @@ public class NumericalCard extends ColorfulCard {
         }
     }
 
+    // color of card
     private final Color color;
+    // value of card
     private final Value value;
 
+    /**
+     * Construct a numerical card
+     *
+     * @param color color of card
+     * @param value value of card
+     */
     public NumericalCard(final Color color, final Value value) {
         this.color = color;
         this.value = value;
     }
 
+    /**
+     * Method for access to color
+     * @return String get color
+     */
     @Override
     public String getColor() {
         return this.color.name();
     }
 
+    /**
+     * Method for access to color
+     * @return String get value
+     */
     @Override
     public String getValue() {
         return this.value.toString();
     }
 
+    /**
+     * Method for check match between two card
+     * @param card input card for compare
+     * @return boolean return true if are match
+     */
     @Override
     public boolean match(Card card) {
         if (card.getColor().equals("BLACK"))
@@ -112,11 +142,21 @@ public class NumericalCard extends ColorfulCard {
                 || card.getValue().equals(this.getValue()));
     }
 
+    /**
+     * Apply effect on state of table
+     * @param table table of game
+     * @param players list of players
+     */
     @Override
     public void effect(Table table, ArrayList<Player> players) {
 
     }
 
+    /**
+     * Method for check input color is valid or not
+     * @param colorToComp color to compare
+     * @return boolean if color is valid returns true
+     */
     public static boolean validColor(String colorToComp) {
         for (Color color : Color.values()) {
             if (color.name().equals(colorToComp.toUpperCase()))
@@ -125,6 +165,9 @@ public class NumericalCard extends ColorfulCard {
         return false;
     }
 
+    /**
+     * Method for show card
+     */
     public void show() {
         super.show(color, value.toString());
     }

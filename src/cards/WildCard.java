@@ -8,8 +8,16 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class for Wild card
+ *
+ * @author Mahdi Saeedi
+ * @version 1.0.0
+ * @since 2020-04-18
+ */
 public class WildCard extends Card {
 
+    // Enum structure for value of wild card
     public enum Value {
         WILD {
             public String toString() {
@@ -23,15 +31,26 @@ public class WildCard extends Card {
         }
     }
 
+    // color of card
     private final String color = "BLACK";
+    // value of card
     private final Value value;
+    // variable for show this card use or not
     private boolean used;
+    // color that player choose when use this card
     private String effectiveColor;
 
+    /**
+     * Construct a wild card
+     */
     public WildCard() {
         this.value = Value.WILD;
     }
 
+    /**
+     * Method for access to color
+     * @return String get color
+     */
     @Override
     public String getColor() {
         if (!this.used)
@@ -40,11 +59,20 @@ public class WildCard extends Card {
             return this.effectiveColor;
     }
 
+    /**
+     * Method for access to color
+     * @return String get value
+     */
     @Override
     public String getValue() {
         return this.value.name();
     }
 
+    /**
+     * Method for check match between two card
+     * @param card input card for compare
+     * @return boolean return true if are match
+     */
     @Override
     public boolean match(Card card) {
         if (this.getColor().equals("BLACK"))
@@ -55,6 +83,10 @@ public class WildCard extends Card {
             return (card.getColor().equals(this.getColor()));
     }
 
+    /**
+     * Method for set color on table
+     * @param color color for change
+     */
     public boolean setColor(String color) {
         if (this.used)
             return false;
@@ -66,14 +98,9 @@ public class WildCard extends Card {
         return true;
     }
 
-    @Override
-    public String toString() {
-        if (this.used)
-            return super.toString();
-
-        return this.getValue();
-    }
-
+    /**
+     * Method for show card
+     */
     public void show() {
 
         String ANSI_COLOR;
@@ -98,11 +125,20 @@ public class WildCard extends Card {
         System.out.printf("|$$$$$$$$$$$$$$$|\n" + ANSI_RESET);
     }
 
+    /**
+     * Apply effect on state of table
+     * @param table table of game
+     * @param players list of players
+     */
     public void effect(Table table, ArrayList<Player> players) {
         table.changeCurrentPlayer(players);
         changeColor(table);
     }
 
+    /**
+     * Method for change color on table
+     * @param table game table
+     */
     public void changeColor(Table table) {
         System.out.println("choose color for table");
         int i = 1;
@@ -127,6 +163,5 @@ public class WildCard extends Card {
         setColor(NumericalCard.Color.values()[color - 1].toString());
 
     }
-
 
 }

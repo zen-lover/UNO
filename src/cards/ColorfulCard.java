@@ -5,18 +5,38 @@ import game.Table;
 
 import java.util.ArrayList;
 
+/**
+ * Class for colorful card
+ *
+ * @author Mahdi Saeedi
+ * @version 1.0.0
+ * @since 2020-04-18
+ */
 public abstract class ColorfulCard extends Card {
 
-
+    /**
+     * Construct a colorful card
+     */
     public ColorfulCard() {
     }
 
+    /**
+     * Method for access to color
+     * @return String get color
+     */
     @Override
     public abstract String getColor();
 
+    /**
+     * Method for access to color
+     * @return String get value
+     */
     @Override
     public abstract String getValue();
 
+    /**
+     * Method for show card
+     */
     public void show(NumericalCard.Color color, String value) {
 
         String ANSI_COLOR;
@@ -54,9 +74,19 @@ public abstract class ColorfulCard extends Card {
         System.out.printf("|$$$$$$$$$$$$$$$|\n" + ANSI_RESET);
     }
 
+    /**
+     * Method for check match between two card
+     * @param card input card for compare
+     * @return boolean return true if are match
+     */
     @Override
     public abstract boolean match(Card card);
 
+    /**
+     * Apply effect on state of table
+     * @param table table of game
+     * @param players list of players
+     */
     public abstract void effect(Table table, ArrayList<Player> players);
 
 }
