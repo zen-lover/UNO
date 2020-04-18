@@ -20,20 +20,20 @@ public class UnoGame {
 
     public void init() {
 
-        System.out.println("\033[1;36m"+"\nWelcome to UNO game\n"+"\033[0m");
+        System.out.println("\033[1;36m" + "\nWelcome to UNO game\n" + "\033[0m");
         boolean invalid;
         int numberOfPlayer = 3;
         do {
             invalid = false;
             try {
                 Scanner in = new Scanner(System.in);
-                System.out.println("\033[0;35m"+"please enter number of player (3,5):"+"\033[0m");
+                System.out.println("\033[0;35m" + "please enter number of player (3,5):" + "\033[0m");
                 numberOfPlayer = in.nextInt();
                 if (numberOfPlayer > 5 || numberOfPlayer < 3) {
                     throw new ArithmeticException("invalid number.");
                 }
             } catch (Exception e) {
-                System.out.println("\033[0;31m"+"format number of player is not valid."+"\033[0m");
+                System.out.println("\033[0;31m" + "format number of player is not valid." + "\033[0m");
                 invalid = true;
             }
 
@@ -60,13 +60,13 @@ public class UnoGame {
                                 throw new ArithmeticException("invalid number.");
                             }
                         } catch (Exception e) {
-                            System.out.println("\033[0;31m"+"format type of player is not valid."+"\033[0m");
+                            System.out.println("\033[0;31m" + "format type of player is not valid." + "\033[0m");
                             invalid = true;
                         }
 
                     } while (valid);
                 } catch (Exception e) {
-                    System.out.println("\033[0;31m"+"format name of player is not valid."+"\033[0m");
+                    System.out.println("\033[0;31m" + "format name of player is not valid." + "\033[0m");
                     invalid = true;
                 }
 
@@ -81,22 +81,24 @@ public class UnoGame {
         }
 
         table.prepareTable();
-
         table.divideCard(players);
 
     }
 
     public void start() {
 
-        System.out.println("\n\n***** game start *****\n\n");
+        System.out.println("\n\n*************** game start ***************\n\n");
         Display display = Display.getDisplay();
         Random random = new Random();
         Player p = players.get(random.nextInt(players.size()));
         table.setCurrentPlayer(p);
         display.showTable(players, table);
+        table.getPile().getTopCard().effect(table, players);
+        System.out.println("effect first card");
+        display.showTable(players, table);
         do {
-
-
+            manageTurn();
+            display.showTable(players, table);
         } while (!endGame());       ///////////
 
     }
@@ -116,5 +118,27 @@ public class UnoGame {
 
     public Table getTable() {
         return table;
+    }
+
+    public void manageTurn() {
+
+        if (table.getCurrentPlayer() instanceof HumanPlayer) {
+            System.out.println("\n");
+            System.out.println(table.getCurrentPlayer().getName() + " is your turn");
+            System.out.println("This is your hand:\n");
+            for (Card card : table.getCurrentPlayer().getHand().getCardList()) {
+                card.show();
+            }
+            table.getCurrentPlayer().play(table, players);
+
+
+        } else {
+            Scanner in = new Scanner(System.in);
+            System.out.println(table.getCurrentPlayer().getName() + " is pc player");
+            table.getCurrentPlayer().play(table, players);
+            System.out.println("please enter any thing then press enter to pass turn");
+            table.changeCurrentPlayer(players);
+            in.next();
+        }
     }
 }
