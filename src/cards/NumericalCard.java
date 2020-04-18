@@ -1,5 +1,10 @@
 package cards;
 
+import Player.Player;
+import game.Table;
+
+import java.util.ArrayList;
+
 public class NumericalCard extends ColorfulCard {
 
     public enum Color {
@@ -49,6 +54,11 @@ public class NumericalCard extends ColorfulCard {
 
         return (card.getColor().equals(this.getColor())
                 || card.getValue().equals(this.getValue()));
+    }
+
+    @Override
+    public void effect(Table table, ArrayList<Player> players) {
+
     }
 
     public static boolean validColor(String colorToComp){

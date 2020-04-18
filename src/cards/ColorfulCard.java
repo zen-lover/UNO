@@ -1,5 +1,10 @@
 package cards;
 
+import Player.Player;
+import game.Table;
+
+import java.util.ArrayList;
+
 public abstract class ColorfulCard extends Card {
 
 
@@ -51,5 +56,7 @@ public abstract class ColorfulCard extends Card {
 
     @Override
     public abstract boolean match(Card card);
+
+    public abstract void effect(Table table, ArrayList<Player> players);
 
 }
