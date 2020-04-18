@@ -7,17 +7,31 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class for manage the game
+ *
+ * @author Mahdi Saeedi
+ * @version 1.0.0
+ * @since 2020-04-18
+ */
 public class UnoGame {
 
+    // game table
     private Table table;
+    // list of players
     private ArrayList<Player> players;
 
-
+    /**
+     * Construct a Uno game obj
+     */
     public UnoGame() {
         this.table = new Table();
         this.players = new ArrayList<Player>();
     }
 
+    /**
+     * Method for initialize game
+     */
     public void init() {
 
         System.out.println("\033[1;36m" + "\nWelcome to UNO game\n" + "\033[0m");
@@ -85,9 +99,12 @@ public class UnoGame {
 
     }
 
+    /**
+     * Method for start game and handle turns
+     */
     public void start() {
 
-        System.out.println("\n\n*************** game start ***************\n\n");
+        System.out.println("\n\n\n\n\n\n*************** game start ***************\n\n");
         Display display = Display.getDisplay();
         Random random = new Random();
         Player p = players.get(random.nextInt(players.size()));
@@ -103,10 +120,17 @@ public class UnoGame {
 
     }
 
+    /**
+     * Method for finish game and declare winner
+     */
     public void finish() {
         Display.getDisplay().scoreTable(players);
     }
 
+    /**
+     * Method for check end of game
+     * @return boolean This returns true if game is finish
+     */
     private boolean endGame() {
         for (Player player : players) {
             if (player.getHand().getNumCards() < 1) {
@@ -116,10 +140,17 @@ public class UnoGame {
         return false;
     }
 
+    /**
+     * Method for access to game table
+     * @return Table This returns the table
+     */
     public Table getTable() {
         return table;
     }
 
+    /**
+     * Method for manage turn for current player
+     */
     public void manageTurn() {
 
         if (table.getCurrentPlayer() instanceof HumanPlayer) {
@@ -137,7 +168,6 @@ public class UnoGame {
             System.out.println(table.getCurrentPlayer().getName() + " is pc player");
             table.getCurrentPlayer().play(table, players);
             System.out.println("please enter any thing then press enter to pass turn");
-            table.changeCurrentPlayer(players);
             in.next();
         }
     }

@@ -5,17 +5,37 @@ import cards.*;
 
 import java.util.*;
 
+/**
+ * Class for display table and result
+ *
+ * @author Mahdi Saeedi
+ * @version 1.0.0
+ * @since 2020-04-18
+ */
 public class Display {
 
+    /**
+     * Construct a display obj
+     */
     private Display() {
     }
 
+    // create a display obj in own class
     private static Display display = new Display();
 
+    /**
+     * Method to access the display obj
+     * @return Display This returns display obj
+     */
     public static Display getDisplay() {
         return display;
     }
 
+    /**
+     * Method for show game table
+     * @param players list of players
+     * @param table game table
+     */
     public void showTable(ArrayList<Player> players, Table table) {
 
         HashMap<Player, Integer> playerIntegerHashMap = new HashMap<Player, Integer>();
@@ -26,7 +46,7 @@ public class Display {
         Set<Player> keys = sortId.keySet();
         List<Player> listKeys = new ArrayList<Player>( keys );
 
-        System.out.println("\n\n-------TABLE-------\n\n");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n-------TABLE-------\n\n");
         System.out.printf("direction:");
         if (table.isClockwise()){
             System.out.println("clockwise\n");
@@ -63,7 +83,10 @@ public class Display {
 
     }
 
-
+    /**
+     * This Method show score table end of game and show winner
+     * @param players list of players
+     */
     public void scoreTable(ArrayList<Player> players) {
         HashMap<Player, Integer> scores = new HashMap<Player, Integer>();
         for (Player player : players) {
@@ -103,6 +126,11 @@ public class Display {
         }
     }
 
+    /**
+     * This method sort list of player by score
+     * @param hm list of player and their score
+     * @return HashMap list of player and their score that is sorted
+     */
     public static HashMap<Player, Integer> sortByValue(HashMap<Player, Integer> hm)
     {
         // Create a list from elements of HashMap
