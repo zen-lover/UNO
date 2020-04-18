@@ -3,16 +3,52 @@
   <component name="ChangeListManager">
     <list default="true" id="4d3cd7f9-01eb-4588-b5f6-31e26be6f043" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/PcPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/PcPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/ColorfulCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/ColorfulCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/Pile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/Pile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/WildCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/WildCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/UnoGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/UnoGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Player/HumanPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/Player/HumanPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Player/PcPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/Player/PcPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/CardList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/CardList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/ColorfulCard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/ColorfulCard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/ColorfulCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/ColorfulCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/DrawTwoCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/DrawTwoCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/Hand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/Hand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard$Value.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/MovementCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard$Value.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/NumericalCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/Pile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/Pile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/ReverseCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/ReverseCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/SkipCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/SkipCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/WildCard$Value$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/WildCard$Value$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/WildCard$Value$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/WildCard$Value$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/WildCard$Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/WildCard$Value.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/WildCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/WildCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/WildDrawFourCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/WildDrawFourCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/game/Display$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/game/Display$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/game/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/game/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/game/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/game/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/game/UnoGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/game/UnoGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,78 +112,87 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="183" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586938814163">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="183" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1586938814163" />
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1587037026305">
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1587191979389">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1587037026305" />
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1587191979389" />
     <state x="486" y="342" width="467" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587029061747">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="486" y="342" width="467" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1587029061747" />
-    <state width="1398" height="432" key="GridCell.Tab.0.bottom" timestamp="1587037895948">
+    <state x="463" y="199" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587233143027">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="432" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587037895948" />
-    <state width="1398" height="432" key="GridCell.Tab.0.center" timestamp="1587037895947">
+    <state x="463" y="199" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1587233143027" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1587204956002">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="432" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587037895947" />
-    <state width="1398" height="432" key="GridCell.Tab.0.left" timestamp="1587037895946">
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1587204956002" />
+    <state width="1398" height="353" key="GridCell.Tab.0.bottom" timestamp="1587232979363">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="432" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587037895946" />
-    <state width="1398" height="432" key="GridCell.Tab.0.right" timestamp="1587037895948">
+    <state width="1398" height="353" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587232979363" />
+    <state width="1398" height="353" key="GridCell.Tab.0.center" timestamp="1587232979361">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="432" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587037895948" />
-    <state width="1398" height="268" key="GridCell.Tab.1.bottom" timestamp="1587036437096">
+    <state width="1398" height="353" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587232979361" />
+    <state width="1398" height="353" key="GridCell.Tab.0.left" timestamp="1587232979360">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="268" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587036437096" />
-    <state width="1398" height="268" key="GridCell.Tab.1.center" timestamp="1587036437095">
+    <state width="1398" height="353" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587232979360" />
+    <state width="1398" height="353" key="GridCell.Tab.0.right" timestamp="1587232979362">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="268" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1587036437095" />
-    <state width="1398" height="268" key="GridCell.Tab.1.left" timestamp="1587036437094">
+    <state width="1398" height="353" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587232979362" />
+    <state width="1398" height="547" key="GridCell.Tab.1.bottom" timestamp="1587221996592">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="268" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1587036437094" />
-    <state width="1398" height="268" key="GridCell.Tab.1.right" timestamp="1587036437095">
+    <state width="1398" height="547" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587221996592" />
+    <state width="1398" height="547" key="GridCell.Tab.1.center" timestamp="1587221996591">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="268" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1587036437095" />
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1587018335225">
+    <state width="1398" height="547" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1587221996591" />
+    <state width="1398" height="547" key="GridCell.Tab.1.left" timestamp="1587221996591">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1587018335225" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/game/UnoGame.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/game/Table.java</url>
-          <line>88</line>
-          <properties class="game.Table" method="pullCard">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((Player.PcPlayer)game.players.get(0)).hand.cardList" custom="Player.PcPlayer" />
-      </configuration>
-    </watches-manager>
+    <state width="1398" height="547" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1587221996591" />
+    <state width="1398" height="547" key="GridCell.Tab.1.right" timestamp="1587221996592">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="547" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1587221996592" />
+    <state x="533" y="179" key="RollbackChangesDialog" timestamp="1587217893665">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="179" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1587217893665" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1587190425617">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1587190425617" />
   </component>
 </project>
