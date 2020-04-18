@@ -7,27 +7,45 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class for pc player
+ *
+ * @author Mahdi Saeedi
+ * @version 1.0.0
+ * @since 2020-04-18
+ */
 public class PcPlayer extends Player {
 
+    /**
+     * Construct a pc player obj
+     *
+     * @param name player name
+     * @param id player id
+     */
     public PcPlayer(String name, int id) {
         super(name, id);
     }
 
+    /**
+     * Method for handle turn for player
+     * @param table game table
+     * @param players players
+     */
     public void play(Table table, ArrayList<Player> players) {
 
         if (checkForPlay(table.getPile().getTopCard())) {
-            System.out.println("select card except wild card");
+//            System.out.println("select card except wild draw card");
             boolean valid = true;
+            int choice = 0;
             do {
                 valid = true;
-                int choice = 0;
-                System.out.println("\nplease choose a card:");
-                System.out.println(table.getCurrentPlayer().getHand().toString());
+//                System.out.println("\nplease choose a card:");
+//                System.out.println(table.getCurrentPlayer().getHand().toString());
                 try {
-                    Random random = new Random();                                                   // diff between pc and human
-                    choice = random.nextInt(table.getCurrentPlayer().getHand().getNumCards()) + 1;    // diff between pc and human
-                    if (!table.getCurrentPlayer().getHand().getCardByIndex(choice - 1).getColor().equals("BLACK")) {
-                        ColorfulCard card = (ColorfulCard) table.getCurrentPlayer().getHand().getCardByIndex(choice - 1);
+                    if (choice < table.getCurrentPlayer().getHand().getNumCards()){         //diff
+                        choice ++;
+                    }
+                    ColorfulCard card = (ColorfulCard) table.getCurrentPlayer().getHand().getCardByIndex(choice - 1);
                         if (table.getPile().getTopCard().match((table.getCurrentPlayer().getHand().getCardByIndex(choice - 1)))) {
                             if (!(card instanceof DrawTwoCard)) {
                                 int i;
@@ -46,32 +64,27 @@ public class PcPlayer extends Player {
                             table.changeCurrentPlayer(players);
                             valid = false;
                         } else {
-                            System.out.println("cant choose this card, try another");
+//                            System.out.println("cant choose this card, try another");
                             valid = true;
                         }
-                    } else {
-                        System.out.println("select card except wild card");
-                        valid = true;
-                    }
-
                 } catch (Exception e) {
-                    System.out.println("\033[0;31m" + "format choice of card is not valid." + "\033[0m");
+//                    System.out.println("\033[0;31m" + "format choice of card is not valid." + "\033[0m");
                 }
 
             } while (valid);
         } else {
-            if (checkForWild()) {
-                System.out.println("select wild card");
+            if (checkForWildDraw()) {
+//                System.out.println("select wild draw card");
                 boolean valid = true;
+                int choice = 0;
                 do {
                     valid = true;
-                    int choice = 0;
-                    System.out.println("\nplease choose a card:");
-                    System.out.println(table.getCurrentPlayer().getHand().toString());
+//                    System.out.println("\nplease choose a card:");
+//                    System.out.println(table.getCurrentPlayer().getHand().toString());
                     try {
-                        Random random = new Random();                                                   // diff between pc and human
-                        choice = random.nextInt(table.getCurrentPlayer().getHand().getNumCards()) + 1;    // diff between pc and human
-                        if (table.getCurrentPlayer().getHand().getCardByIndex(choice - 1).getColor().equals("BLACK")) {
+                        if (choice < table.getCurrentPlayer().getHand().getNumCards()){         //diff
+                            choice ++;
+                        }
                             WildCard card = (WildCard) table.getCurrentPlayer().getHand().getCardByIndex(choice - 1);
                             if (table.getPile().getTopCard().match((table.getCurrentPlayer().getHand().getCardByIndex(choice - 1)))) {
                                 if (!(card instanceof WildDrawFourCard)) {
@@ -85,7 +98,6 @@ public class PcPlayer extends Player {
                                         return;
                                     }
                                 }
-                                changeColor(card);
                                 table.getPile().addCard(card);
                                 table.getCurrentPlayer().getHand().getCard(choice - 1);
                                 card.effect(table, players);
@@ -93,16 +105,12 @@ public class PcPlayer extends Player {
                                 table.changeCurrentPlayer(players);
                                 valid = false;
                             } else {
-                                System.out.println("cant choose this card, try another");
+//                                System.out.println("cant choose this card, try another");
                                 valid = true;
                             }
-                        } else {
-                            System.out.println("select wild card");
-                            valid = true;
-                        }
 
                     } catch (Exception e) {
-                        System.out.println("\033[0;31m" + "format choice of card is not valid." + "\033[0m");
+//                        System.out.println("\033[0;31m" + "format choice of card is not valid." + "\033[0m");
                     }
 
                 } while (valid);
@@ -122,7 +130,7 @@ public class PcPlayer extends Player {
                             return;
                         }
                     } else {
-                        System.out.println("you should take a card");
+//                        System.out.println("you should take a card");
                         Card card;
                         card = table.pullCard();
                         takeCard(card);
@@ -133,13 +141,6 @@ public class PcPlayer extends Player {
         }
     }
 
-    public void changeColor(WildCard card) {
-        System.out.println("choose color for table");
-        Random random = new Random();
-        int color = random.nextInt(4) + 1;
-        card.setColor(NumericalCard.Color.values()[color - 1].toString());
-
-    }
 
 
 }

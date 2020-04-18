@@ -6,16 +6,34 @@ import game.Table;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Class for human player
+ *
+ * @author Mahdi Saeedi
+ * @version 1.0.0
+ * @since 2020-04-18
+ */
 public class HumanPlayer extends Player {
 
+    /**
+     * Construct a human player obj
+     *
+     * @param name player name
+     * @param id player id
+     */
     public HumanPlayer(String name, int id) {
         super(name, id);
     }
 
+    /**
+     * Method for handle turn for player
+     * @param table game table
+     * @param players players
+     */
     public void play(Table table, ArrayList<Player> players) {
 
         if (checkForPlay(table.getPile().getTopCard())) {
-            System.out.println("select card except wild card");
+            System.out.println("select card except wild Draw card");
             boolean valid = true;
             do {
                 valid = true;
@@ -25,7 +43,6 @@ public class HumanPlayer extends Player {
                 try {
                     Scanner in = new Scanner(System.in);
                     choice = in.nextInt();
-                    if (!table.getCurrentPlayer().getHand().getCardByIndex(choice - 1).getColor().equals("BLACK")) {
                         ColorfulCard card = (ColorfulCard) table.getCurrentPlayer().getHand().getCardByIndex(choice - 1);
                         if (table.getPile().getTopCard().match((table.getCurrentPlayer().getHand().getCardByIndex(choice - 1)))) {
                             if (!(card instanceof DrawTwoCard)) {
@@ -48,10 +65,6 @@ public class HumanPlayer extends Player {
                             System.out.println("cant choose this card, try another");
                             valid = true;
                         }
-                    } else {
-                        System.out.println("select card except wild card");
-                        valid = true;
-                    }
 
                 } catch (Exception e) {
                     System.out.println("\033[0;31m" + "format choice of card is not valid." + "\033[0m");
@@ -59,8 +72,8 @@ public class HumanPlayer extends Player {
 
             } while (valid);
         } else {
-            if (checkForWild()) {
-                System.out.println("select wild card");
+            if (checkForWildDraw()) {
+                System.out.println("select wild Draw card");
                 boolean valid = true;
                 do {
                     valid = true;
@@ -70,7 +83,6 @@ public class HumanPlayer extends Player {
                     try {
                         Scanner in = new Scanner(System.in);
                         choice = in.nextInt();
-                        if (table.getCurrentPlayer().getHand().getCardByIndex(choice - 1).getColor().equals("BLACK")) {
                             WildCard card = (WildCard) table.getCurrentPlayer().getHand().getCardByIndex(choice - 1);
                             if (table.getPile().getTopCard().match((table.getCurrentPlayer().getHand().getCardByIndex(choice - 1)))) {
                                 if (!(card instanceof WildDrawFourCard)) {
@@ -84,7 +96,6 @@ public class HumanPlayer extends Player {
                                         return;
                                     }
                                 }
-                                changeColor(card);
                                 table.getPile().addCard(card);
                                 table.getCurrentPlayer().getHand().getCard(choice - 1);
                                 card.effect(table, players);
@@ -95,10 +106,6 @@ public class HumanPlayer extends Player {
                                 System.out.println("cant choose this card, try another");
                                 valid = true;
                             }
-                        } else {
-                            System.out.println("select wild card");
-                            valid = true;
-                        }
 
                     } catch (Exception e) {
                         System.out.println("\033[0;31m" + "format choice of card is not valid." + "\033[0m");
@@ -125,6 +132,9 @@ public class HumanPlayer extends Player {
                         Card card;
                         card = table.pullCard();
                         takeCard(card);
+                        Scanner in = new Scanner(System.in);
+                        System.out.println("please enter anything then press enter to take card");
+                        in.next();
                         takenCard = true;
                     }
                 }
@@ -134,22 +144,5 @@ public class HumanPlayer extends Player {
 
     }
 
-    public void changeColor(WildCard card) {
-        System.out.println("choose color for table");
-        int i = 1;
-        try {
-            for (NumericalCard.Color color : NumericalCard.Color.values()) {
-                System.out.println(i + ") " + color.toString());
-                i++;
-            }
-        } catch (Exception e) {
-            System.out.println("format choice of card is not valid.");
-        }
-
-        Scanner in = new Scanner(System.in);
-        int color = in.nextInt();           //set color for wild card
-        card.setColor(NumericalCard.Color.values()[color - 1].toString());
-
-    }
 
 }
