@@ -33,6 +33,11 @@ public class Display {
         }else{
             System.out.println("anticlockwise\n");
         }
+        System.out.printf("current color: "+ table.getPile().getTopCard().getColor());
+        System.out.printf("\t\tcurrent value: "+ table.getPile().getTopCard().getValue());
+        System.out.printf("\ncurrent player: "+ table.getCurrentPlayer().getName());
+        System.out.printf("\t\tnumber of blame card: "+ table.getBlame());
+        System.out.println();
         System.out.println("----------------------------------------------------------------");
         int i,j;
         for (i=0; i<listKeys.size()/2; i++){
@@ -43,7 +48,7 @@ public class Display {
             System.out.printf("cards: %-15d",listKeys.get(j).getHand().getNumCards());
         }
         System.out.println("\n");
-        table.getPile().getCardList().get(0).show();
+        table.getPile().getTopCard().show();
         System.out.println();
         for (i=listKeys.size()-1; i>=listKeys.size()/2; i--){
             System.out.printf("%-22s",listKeys.get(i).getName());
@@ -55,21 +60,6 @@ public class Display {
         System.out.println();
         System.out.println("----------------------------------------------------------------");
 
-        if (table.getCurrentPlayer() instanceof HumanPlayer){
-            System.out.println("\n");
-            System.out.println(table.getCurrentPlayer().getName() + " is your turn");
-            System.out.println("This is your hand:\n");
-            for (Card card: table.getCurrentPlayer().getHand().getCardList()){
-                card.show();
-            }
-            System.out.println("\nplease choose a card:");
-            System.out.println(table.getCurrentPlayer().getHand().toString());
-        }else {
-            Scanner in = new Scanner(System.in);
-            System.out.println("pc player turn");
-            System.out.println("please press any key to pass turn");
-            in.nextByte();
-        }
 
     }
 
