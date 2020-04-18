@@ -9,10 +9,9 @@ public class Table {
 
     private Pile pile;
     private Deck deck;
-    private static Table table = null;
     private boolean clockwise;
     private Player currentPlayer;
-    private NumericalCard.Color color;
+    private int blame;
 
     public Table() {
         this.pile = new Pile();
@@ -20,18 +19,6 @@ public class Table {
         this.clockwise = true;
     }
 
-//    public static Table getInstance(){
-//        if(table == null)
-//            table = new Table();
-//
-//        return table;
-//    }
-
-    /**
-     * Prepares the table to start the game. The cards (if there is some) in
-     * the Discard Pile are put back into the deck and then it is shuffle.
-     * Finally, one card is put back in the discard pile.
-     */
     public void prepareTable() {
         if (this.pile.getNumCards() != 0) {
             ArrayList<Card> list = pile.takeCardsBack();
@@ -48,45 +35,9 @@ public class Table {
         }
 
         this.pile.initialize(card);
+        blame = 0;
     }
 
-
-    /**
-     * Get the last played card.
-     *
-     * @return the card on the top of the discard pile.
-     */
-    public Card showTopCard() {
-        return this.pile.getTopCard();
-    }
-
-    /**
-     * Try to play a card that is in the hand of the current player. If it
-     * is possible, then the card is put in the discard pile and its effect
-     * is applied in the game.
-     *
-     * @param card the name of the card that will be played.
-     * @return if the operation was successful.
-     */
-    public boolean pushCard(Card card) {
-        if (card == null)
-            return false;
-
-        if (this.pile.getTopCard().match(card)) {
-            this.pile.addCard(card);
-            return true;
-
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * Take a card from the top of the deck. If the deck is empty, then
-     * the discard pile is used to provide more cards to the game.
-     *
-     * @return one card.
-     */
     public Card pullCard() {
         Card card = null;
         if (this.deck.isEmpty()) {
@@ -112,16 +63,6 @@ public class Table {
         return this.deck.getCard(0);
     }
 
-    /**
-     * Get the number of cards left in the deck.
-     *
-     * @return the number of cards in the deck.
-     */
-    public int getNumCardsOnDeck() {
-        return this.deck.getNumCards();
-    }
-
-
     public void setCurrentPlayer(Player currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
@@ -143,14 +84,6 @@ public class Table {
     }
 
     public void reverseDirection(ArrayList<Player> players) {
-        ArrayList<Player> revArrayList = new ArrayList<Player>();
-        for (int i = players.size() - 1; i >= 0; i--) {
-            // Append the elements in reverse order
-            revArrayList.add(players.get(i));
-        }
-        // Return the reversed arraylist
-        players = revArrayList;
-
         clockwise = !clockwise;
     }
 
@@ -162,23 +95,33 @@ public class Table {
         return pile;
     }
 
-    public NumericalCard.Color getColor() {
-        return color;
-    }
-
-    public void changeCurrentPlayer(ArrayList<Player> players){
-        if (table.isClockwise()){
-            if (players.indexOf(currentPlayer) == players.size()-1){
+    public void changeCurrentPlayer(ArrayList<Player> players) {
+        if (isClockwise()) {
+            if (players.indexOf(currentPlayer) == players.size() - 1) {
                 currentPlayer = players.get(0);
-            }else {
-                currentPlayer = players.get(players.indexOf(currentPlayer)+1);
+            } else {
+                currentPlayer = players.get(players.indexOf(currentPlayer) + 1);
             }
-        }else{
-            if (players.indexOf(currentPlayer) == 0){
-                currentPlayer = players.get(players.size()-1);
-            }else {
-                currentPlayer = players.get(players.indexOf(currentPlayer)-1);
+        } else {
+            if (players.indexOf(currentPlayer) == 0) {
+                currentPlayer = players.get(players.size() - 1);
+            } else {
+                currentPlayer = players.get(players.indexOf(currentPlayer) - 1);
             }
         }
     }
+
+    public int getBlame() {
+        return blame;
+    }
+
+    public void setBlame(int blame) {
+        this.blame += blame;
+    }
+
+    public void resetBlame(int blame) {
+        this.blame = blame;
+    }
+
+
 }
