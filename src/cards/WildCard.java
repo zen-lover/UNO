@@ -8,8 +8,16 @@ import java.util.ArrayList;
 public class WildCard extends Card {
 
     public enum Value {
-        WILD            { public String toString() { return "WILD";}},
-        WILDDRAWFOUR    { public String toString() { return "WILD+4";}}
+        WILD {
+            public String toString() {
+                return "WILD";
+            }
+        },
+        WILDDRAWFOUR {
+            public String toString() {
+                return "WILD+4";
+            }
+        }
     }
 
     private final String color = "BLACK";
@@ -17,53 +25,37 @@ public class WildCard extends Card {
     private boolean used;
     private String effectiveColor;
 
-    public WildCard(){
+    public WildCard() {
         this.value = Value.WILD;
     }
 
-    /**
-     * Get the color of the card. If this card was already played, then
-     * the new color is showed.
-     */
     @Override
-    public String getColor(){
-        if(!this.used)
+    public String getColor() {
+        if (!this.used)
             return this.color;
         else
             return this.effectiveColor;
     }
 
-    /**
-     * Get the value of the card(WILD).
-     */
     @Override
-    public String getValue(){
+    public String getValue() {
         return this.value.name();
     }
 
-
-    /**
-     * Only matches with other cards if its has a color different of BLACK.
-     */
     @Override
-    public boolean match(Card card){
-        if(this.getColor().equals("BLACK"))
+    public boolean match(Card card) {
+        if (this.getColor().equals("BLACK"))
             return false;
-        else if(card.getColor().equals("BLACK"))
+        else if (card.getColor().equals("BLACK"))
             return true;
         else
             return (card.getColor().equals(this.getColor()));
     }
 
-    /**
-     * Set the color of the wild card.
-     * @param color desired.
-     * @return if the operation could be done.
-     */
-    public boolean setColor(String color){
-        if(this.used)
+    public boolean setColor(String color) {
+        if (this.used)
             return false;
-        if(!NumericalCard.validColor(color))
+        if (!NumericalCard.validColor(color))
             throw new IllegalArgumentException();
 
         this.effectiveColor = color;
@@ -71,21 +63,15 @@ public class WildCard extends Card {
         return true;
     }
 
-    /**
-     * Get the representation of the card.
-     * @return the value of the wild card if the card wasn't used yet. If the
-     * card was already used, then it returns the color chosen and the type.
-     */
     @Override
-    public String toString(){
-        if(this.used)
+    public String toString() {
+        if (this.used)
             return super.toString();
 
         return this.getValue();
     }
 
-
-    public void show(){
+    public void show() {
 
         String ANSI_COLOR;
         switch (color) {
@@ -100,16 +86,16 @@ public class WildCard extends Card {
         final String ANSI_RESET = "\u001B[0m";
 
         String str = value.toString();
-        int space1 = 8+str.length()/2;
-        int space2 = 8-str.length()/2;
-        System.out.printf(ANSI_COLOR+"|$$$$$$$$$$$$$$$|\n");
-        System.out.printf("|%" + 17 + "s","|\n");
-        System.out.printf("|%"+ space1 + "s" + "%"+ space2 + "s\n",str,"|");
-        System.out.printf("|%" + 17 + "s","|\n");
-        System.out.printf("|$$$$$$$$$$$$$$$|\n"+ANSI_RESET);
+        int space1 = 8 + str.length() / 2;
+        int space2 = 8 - str.length() / 2;
+        System.out.printf(ANSI_COLOR + "|$$$$$$$$$$$$$$$|\n");
+        System.out.printf("|%" + 17 + "s", "|\n");
+        System.out.printf("|%" + space1 + "s" + "%" + space2 + "s\n", str, "|");
+        System.out.printf("|%" + 17 + "s", "|\n");
+        System.out.printf("|$$$$$$$$$$$$$$$|\n" + ANSI_RESET);
     }
 
-    public void effect(Table table, ArrayList<Player> players){
+    public void effect(Table table, ArrayList<Player> players) {
         table.changeCurrentPlayer(players);
     }
 

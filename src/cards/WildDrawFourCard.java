@@ -5,22 +5,21 @@ import game.Table;
 
 import java.util.ArrayList;
 
-public class WildDrawFourCard extends WildCard{
+public class WildDrawFourCard extends WildCard {
 
     private Value value;
 
-    public WildDrawFourCard(){
+    public WildDrawFourCard() {
         super();
         this.value = Value.WILDDRAWFOUR;
     }
 
     @Override
-    public String getValue(){
+    public String getValue() {
         return this.value.toString();
     }
 
-
-    public void effect(Table table, ArrayList<Player> players){
+    public void effect(Table table, ArrayList<Player> players) {
         table.changeCurrentPlayer(players);
         table.setBlame(4);
     }

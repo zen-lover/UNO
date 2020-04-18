@@ -11,7 +11,7 @@ public class SkipCard extends MovementCard{
         super(color, Value.SKIP);
     }
 
-    public void effect(Table table, ArrayList<Player> players){
+    public void effect(Table table, ArrayList<Player> players) {
         table.changeCurrentPlayer(players);
     }
 }

@@ -7,11 +7,11 @@ import java.util.ArrayList;
 
 public class DrawTwoCard extends MovementCard {
 
-    public DrawTwoCard(NumericalCard.Color color){
+    public DrawTwoCard(NumericalCard.Color color) {
         super(color, Value.DRAWTWO);
     }
 
-    public void effect(Table table, ArrayList<Player> players){
+    public void effect(Table table, ArrayList<Player> players) {
         table.setBlame(2);
     }
 }

@@ -1,39 +1,29 @@
 package cards;
 
-public class Hand extends CardList{
+public class Hand extends CardList {
 
-    public Hand(){
+    public Hand() {
         super();
     }
 
-
     @Override
-    public boolean addCard(Card card){
+    public boolean addCard(Card card) {
         return this.cardList.add(card);
     }
 
-
     @Override
-    public Card getCard(int index){
-        try{
+    public Card getCard(int index) {
+        try {
             return this.cardList.remove(index);
-        } catch(IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             return null;
         }
     }
 
-    public String showCard(int index){
-        try{
-            return this.cardList.get(index).toString();
-        } catch(IndexOutOfBoundsException e){
-            return null;
-        }
-    }
-
-    public Card getCardByIndex(int index){
-        try{
+    public Card getCardByIndex(int index) {
+        try {
             return this.cardList.get(index);
-        } catch(IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             return null;
         }
     }
