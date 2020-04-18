@@ -1,9 +1,12 @@
 package cards;
 
-import Player.Player;
+import Player.*;
 import game.Table;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 public class WildCard extends Card {
 
@@ -85,7 +88,7 @@ public class WildCard extends Card {
         }
         final String ANSI_RESET = "\u001B[0m";
 
-        String str = value.toString();
+        String str = getValue();
         int space1 = 8 + str.length() / 2;
         int space2 = 8 - str.length() / 2;
         System.out.printf(ANSI_COLOR + "|$$$$$$$$$$$$$$$|\n");
@@ -97,6 +100,32 @@ public class WildCard extends Card {
 
     public void effect(Table table, ArrayList<Player> players) {
         table.changeCurrentPlayer(players);
+        changeColor(table);
+    }
+
+    public void changeColor(Table table) {
+        System.out.println("choose color for table");
+        int i = 1;
+        try {
+            for (NumericalCard.Color color : NumericalCard.Color.values()) {
+                System.out.println(i + ") " + color.toString());
+                i++;
+            }
+        } catch (Exception e) {
+            System.out.println("format choice of card is not valid.");
+        }
+
+        int color;
+        if (table.getCurrentPlayer() instanceof HumanPlayer){
+            Scanner in = new Scanner(System.in);
+            color = in.nextInt();           //set color for wild card
+        }else {
+            Random random = new Random();
+            color = random.nextInt(4)+1;
+        }
+
+        setColor(NumericalCard.Color.values()[color - 1].toString());
+
     }
 
 

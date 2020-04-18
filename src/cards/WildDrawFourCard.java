@@ -20,7 +20,7 @@ public class WildDrawFourCard extends WildCard {
     }
 
     public void effect(Table table, ArrayList<Player> players) {
-        table.changeCurrentPlayer(players);
+        super.effect(table,players);
         table.setBlame(4);
     }
 
