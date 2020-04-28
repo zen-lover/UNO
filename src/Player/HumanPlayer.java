@@ -43,8 +43,9 @@ public class HumanPlayer extends Player {
                 try {
                     Scanner in = new Scanner(System.in);
                     choice = in.nextInt();
-                        ColorfulCard card = (ColorfulCard) table.getCurrentPlayer().getHand().getCardByIndex(choice - 1);
-                        if (table.getPile().getTopCard().match((table.getCurrentPlayer().getHand().getCardByIndex(choice - 1)))) {
+                        Card card = table.getCurrentPlayer().getHand().getCardByIndex(choice - 1);
+                        if (table.getPile().getTopCard().match((table.getCurrentPlayer().getHand().getCardByIndex(choice - 1)))
+                        && !(card instanceof WildDrawFourCard)) {
                             if (!(card instanceof DrawTwoCard)) {
                                 int i;
                                 for (i = 0; i < table.getBlame(); i++) {
@@ -100,7 +101,7 @@ public class HumanPlayer extends Player {
                                 table.getCurrentPlayer().getHand().getCard(choice - 1);
                                 card.effect(table, players);
 
-                                table.changeCurrentPlayer(players);
+//                                table.changeCurrentPlayer(players);
                                 valid = false;
                             } else {
                                 System.out.println("cant choose this card, try another");

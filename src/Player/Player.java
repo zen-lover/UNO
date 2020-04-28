@@ -79,14 +79,14 @@ public abstract class Player {
 
     /**
      * Method for check that player can play any card except wild draw card or not
-     * @param Card This is top card on pile
+     * @param pileCard This is top card on pile
      * @return boolean
      */
-    public boolean checkForPlay(Card Card) {
+    public boolean checkForPlay(Card pileCard) {
 
         for (Card card : hand.getCardList()) {
             if (!card.getValue().equals("WILD+4")) {
-                if (card.match(Card)) {
+                if (card.match(pileCard)) {
                     return true;
                 }
             }

@@ -75,9 +75,7 @@ public class WildCard extends Card {
      */
     @Override
     public boolean match(Card card) {
-        if (this.getColor().equals("BLACK"))
-            return false;
-        else if (card.getColor().equals("BLACK"))
+        if (card.getColor().equals("BLACK"))
             return true;
         else
             return (card.getColor().equals(this.getColor()));
