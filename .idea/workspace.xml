@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4d3cd7f9-01eb-4588-b5f6-31e26be6f043" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cards/WildCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cards/WildCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/META-INF/UNO.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Player/HumanPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/Player/HumanPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UNO/cards/WildCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UNO/cards/WildCard.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +69,14 @@
       <option name="presentableId" value="Default" />
       <updated>1586849405439</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed bug for wild+4 and wild cards.">
+      <created>1588100881469</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588100881469</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -93,6 +102,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed bug for wild+4 and wild cards." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug for wild+4 and wild cards." />
+  </component>
   <component name="WindowStateProjectService">
     <state x="183" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586938814163">
       <screen x="0" y="0" width="1440" height="900" />
@@ -110,30 +123,34 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="463" y="199" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1587233143027" />
+    <state x="344" y="65" key="CommitChangelistDialog2" timestamp="1588100881149">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="344" y="65" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1588100881149" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1587204956002">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1587204956002" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1588100808987">
+    <state width="1398" height="466" key="GridCell.Tab.0.bottom" timestamp="1589018092838">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="353" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587233320193" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1588100808987" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1588100808986">
+    <state width="1398" height="466" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589018092838" />
+    <state width="1398" height="466" key="GridCell.Tab.0.center" timestamp="1589018092837">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="353" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587233320192" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1588100808986" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1588100808986">
+    <state width="1398" height="466" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589018092837" />
+    <state width="1398" height="466" key="GridCell.Tab.0.left" timestamp="1589018092836">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="353" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587233320191" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1588100808986" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1588100808986">
+    <state width="1398" height="466" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589018092836" />
+    <state width="1398" height="466" key="GridCell.Tab.0.right" timestamp="1589018092837">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="353" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587233320193" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1588100808986" />
+    <state width="1398" height="466" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589018092837" />
     <state width="1398" height="547" key="GridCell.Tab.1.bottom" timestamp="1587233320189">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -154,10 +171,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="179" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1587217893665" />
-    <state x="397" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1588078591870">
+    <state x="397" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1588531113446">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1587190425617" />
-    <state x="397" y="298" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1588078591870" />
+    <state x="397" y="298" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1588531113446" />
   </component>
 </project>
